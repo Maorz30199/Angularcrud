@@ -12,6 +12,7 @@ angular.module("myApp",[])
   $scope.saveUser = function(){
     $scope.users.push($scope.newUser);
     $scope.newUser ={};
+    $scope.message = "Usuario agregado correctamente!!";
   };
 
   $scope.selectUser = function(user){
@@ -24,5 +25,9 @@ angular.module("myApp",[])
 
   $scope.deleteUser = function(){
     $scope.users.splice($scope.users.indexOf($scope.clickedUser), 1);
+  };
+
+  $scope.clearMessage = function(){
+    $scope.message = "";
   };
 });
